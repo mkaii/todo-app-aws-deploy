@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+@RestController
 public class TodoController {
 
     @Autowired
@@ -26,7 +26,6 @@ public class TodoController {
         return todoService.getAllTodos();
     }
 
-    @ResponseBody
     @GetMapping("todo/done")
     public List<Todo> getDoneTodos()
     {
